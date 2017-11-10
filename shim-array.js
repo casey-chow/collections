@@ -132,16 +132,6 @@ define("deleteAll", function (value, equals) {
     return count;
 });
 
-define("find", function (value, equals) {
-    equals = equals || this.contentEquals || Object.equals;
-    for (var index = 0; index < this.length; index++) {
-        if (index in this && equals(value, this[index])) {
-            return index;
-        }
-    }
-    return -1;
-});
-
 define("findLast", function (value, equals) {
     equals = equals || this.contentEquals || Object.equals;
     var index = this.length;
